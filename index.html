@@ -3,130 +3,69 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>הקלדנית - שירותי הקלדה</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      line-height: 1.6;
-      background: #f9f9f9;
-      scroll-behavior: smooth;
-    }
-    header {
-      background: #4a148c;
-      color: white;
-      padding: 2rem 1rem;
-      text-align: center;
-    }
-    nav {
-      display: flex;
-      justify-content: center;
-      gap: 2rem;
-      margin-top: 1rem;
-    }
-    nav a {
-      color: white;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    section {
-      padding: 3rem 1rem;
-      max-width: 800px;
-      margin: auto;
-    }
-    h2 {
-      color: #4a148c;
-    }
-    .features {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 1rem;
-    }
-    .card {
-      background: white;
-      padding: 1.5rem;
-      border-radius: 0.5rem;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    }
-    form {
-      display: flex;
-      flex-direction: column;
-      gap: 1rem;
-      margin-top: 1rem;
-    }
-    input, textarea, button {
-      padding: 0.75rem;
-      font-size: 1rem;
-      border: 1px solid #ccc;
-      border-radius: 0.5rem;
-    }
-    button {
-      background: #4a148c;
-      color: white;
-      cursor: pointer;
-      transition: background 0.3s;
-    }
-    button:hover {
-      background: #6a1b9a;
-    }
-    footer {
-      text-align: center;
-      padding: 1rem;
-      background: #eee;
-    }
-    @media (max-width: 600px) {
-      .features {
-        grid-template-columns: 1fr;
-      }
-    }
-  </style>
+  <title>שירותי הקלדה - הקלדנית העולמית</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header>
-    <h1>שירותי הקלדה מקצועיים</h1>
-    <p>הקלדה מהירה, מדויקת ודיסקרטית לכל סוגי המסמכים</p>
-    <nav>
-      <a href="#services">שירותים</a>
-      <a href="#join">הצטרפי כקלדנית</a>
-      <a href="#contact">צור קשר</a>
-    </nav>
+  <header class="hero">
+    <img src="images/hero.jpg" alt="שירותי הקלדה מקצועיים">
+    <div class="hero-text">
+      <h1>שירותי הקלדה מדויקים, מהירים, ואמינים</h1>
+      <p>הפוך את כתב היד שלך לספר דיגיטלי או למסמך מסודר</p>
+      <a href="#contact" class="btn">צור קשר</a>
+    </div>
   </header>
 
-  <section id="services">
+  <section class="features">
     <h2>למה דווקא אנחנו?</h2>
-    <div class="features">
-      <div class="card">✔ צוות קלדניות מנוסות</div>
-      <div class="card">✔ הקלדה תורנית, אקדמית, עסקית</div>
-      <div class="card">✔ זמינות גבוהה ומענה מהיר</div>
-      <div class="card">✔ דיסקרטיות מלאה</div>
+    <div class="cards">
+      <div class="card fade-in"><img src="images/speed.png" alt="">הקלדה מהירה במיוחד</div>
+      <div class="card fade-in"><img src="images/accuracy.png" alt="">דיוק ונאמנות למקור</div>
+      <div class="card fade-in"><img src="images/service.png" alt="">שירות אישי לכל לקוח</div>
     </div>
   </section>
 
-  <section id="join">
-    <h2>רוצה להצטרף אלינו כקלדנית?</h2>
-    <p>אם יש לך ניסיון בהקלדה, אהבה לשפה, ורצון לעבוד מהבית – השאירי פרטים ונחזור אלייך.</p>
-    <form>
-      <input type="text" placeholder="שם מלא" required />
-      <input type="text" placeholder="טלפון / אימייל" required />
-      <input type="text" placeholder="ניסיון בהקלדה (שנים / סוגים)" />
-      <textarea placeholder="ספרי לנו בקצרה על עצמך"></textarea>
-      <button type="submit">שלחי בקשה</button>
-    </form>
+  <section class="join">
+    <h2>רוצה להצטרף כקלדנית?</h2>
+    <img src="images/typist.jpg" alt="קלדנית בעבודה">
+    <p>אם את מחפשת השלמת הכנסה מהבית ויש לך שליטה טובה בהקלדה – מקומך איתנו!</p>
+    <a href="#apply" class="btn">שלחי בקשה</a>
   </section>
 
-  <section id="contact">
-    <h2>צרו קשר</h2>
-    <p>מעוניינים בהצעת מחיר להקלדה? השאירו פרטים ונחזור אליכם:</p>
+  <section class="contact" id="contact">
+    <h2>צור קשר להזמנת שירות</h2>
     <form>
-      <input type="text" placeholder="שם מלא" required />
-      <input type="text" placeholder="טלפון / אימייל" required />
-      <textarea placeholder="פרטי הבקשה שלכם"></textarea>
-      <button type="submit">שלח בקשה</button>
+      <input type="text" placeholder="שם מלא" required>
+      <input type="email" placeholder="דוא\"ל">
+      <textarea placeholder="מה ברצונך להקליד?" required></textarea>
+      <button type="submit">שלח</button>
     </form>
   </section>
 
   <footer>
-    <p>&copy; 2025 הקלדנית. כל הזכויות שמורות.</p>
+    <p>© כל הזכויות שמורות - הקלדנית העולמית</p>
   </footer>
+
+  <script>
+    // גלילה חלקה
+    document.querySelectorAll('a[href^="#"]').forEach(link => {
+      link.addEventListener('click', function(e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
+      });
+    });
+
+    // הופעת כרטיסים באנימציה
+    const cards = document.querySelectorAll('.fade-in');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.2 });
+
+    cards.forEach(card => observer.observe(card));
+  </script>
 </body>
 </html>
